@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/v1/todos")
 public class TodoController {
     private final List<Todo> todos;
 
@@ -17,7 +18,7 @@ public class TodoController {
         todos.add(new Todo(2, false, "Learn Hibernate", 8008));
     }
 
-    @GetMapping("/todos")
+    @GetMapping
     public List<Todo> getTodos(){
         return todos;
     }
