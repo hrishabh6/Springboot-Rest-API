@@ -49,3 +49,10 @@ public ResponseEntity<String> setTodos(@RequestBody Todo todo) { ... }
 
 ### ⚠️ Error Handling
 * I created a custom `ErrorResponse` class to send meaningful error messages when a requested todo is not found.
+
+### ✅ Dependency Injection (DI)
+
+- Used `@Service` to let Spring Boot manage and initialize service layer beans.
+- Used `@Qualifier` to specify which implementation to inject when multiple beans of the same type exist.
+- Explored other core annotations like `@Autowired` and `@Repository`.
+- Practiced **Dependency Inversion** (from SOLID principles) by coding to interfaces instead of concrete classes and injecting dependencies via constructors.
